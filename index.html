@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Michael Rodríguez" />
+    <meta name="Description" content="Juego piedra, papel, tijera, lagarto y Spock. Proyecto del curso Básico de JavaScript de Platzi">
+    <title>Paper Rock Scissors Lizard Spock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <section>
+            <div id="div-captainsLog">
+                <p id="captainsLogTxt"></p>
+                <button id="btn_skip" onclick="SkipIntro()">Skip intro</button>
+            </div>
+            <div id="div-game">
+                <h2>Make your choice:</h2>
+                <div id="score">
+                    <h3><span id="score_captain">0</span> : <span id="score_enemy">0</span></h3>
+                    <div id="side_captian"></div>
+                    <div id="side_enemy"></div>
+                    <button id="btn_reset" onclick="restart()">Reset Game</button>
+                </div>
+                <div id="div-game-signs">
+                    <img alt="arrows" onclick="selectGame('rock')" id="game-img-rock" src="imgs/game_rock.png" />
+                    <img alt="arrows" onclick="selectGame('paper')" id="game-img-paper" src="imgs/game_paper.png" />
+                    <img alt="arrows" onclick="selectGame('scissors')" id="game-img-scissors" src="imgs/game_scissors.png" />
+                    <img alt="arrows" onclick="selectGame('lizard')" id="game-img-lizard" src="imgs/game_lizard.png" />
+                    <img alt="arrows" onclick="selectGame('spock')" id="game-img-spock" src="imgs/game_spock.png" />
+                </div>
+            </div>
+            <div id="div-gameOver">
+                <div>
+                    <h1 id="gameOver_txt">GAME OVER MESSAGE</h1>
+                    <button id="playAgain" onclick="location.reload()">Play Again</button>
+                </div>
+            </div>
+            <img alt="Federation_logo" id="federation_logo" src="imgs/logo_federation.png" />
+        </section>
+        <footer>
+            <h4>By Michael Rodríguez (<a href="https://twitter.com/Michaelrdz_me" target="_blank">@michaelrdz.me</a>)<br>
+            Junio 2022</h4>
+        </footer>
+    </main>
+    <script src="typeAnimation.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
